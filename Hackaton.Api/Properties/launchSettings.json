@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "HackatonApi": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Develop"
+      },
+      "applicationUrl": "https://localhost:60333;http://localhost:60334",
+      "dotnetRunMessages": true
+    }
+  }
+}

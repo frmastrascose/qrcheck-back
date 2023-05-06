@@ -1,2 +1,0 @@
-# qrcheck-back
-Projeto Hackaton
