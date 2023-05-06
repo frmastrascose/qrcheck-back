@@ -1,4 +1,5 @@
 ﻿using Domain.Common.Base;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Linq.Expressions;
 
@@ -8,9 +9,10 @@ namespace Domain.Contracts
     {
         IMongoCollection<TDocument> Collection { get; }
 
-        Task InsertOneAsync(TDocument document);
+        Task<ObjectId> InsertOneAsync(TDocument document);
 
         Task<TDocument> FindOneAsync(Expression<Func<TDocument, bool>> filterExpression);
+        Task<IEnumerable<TDocument>> FindAsync(Expression<Func<TDocument, bool>> filterExpression);
 
         Task DeleteOneAsync(Expression<Func<TDocument, bool>> filterExpression);
 

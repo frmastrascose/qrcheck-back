@@ -12,9 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contracts\Services\" />
-    <Folder Include="Entities\Mongo\" />
-    <Folder Include="Services\" />
     <Folder Include="Utils\" />
     <Folder Include="Validators\" />
   </ItemGroup>

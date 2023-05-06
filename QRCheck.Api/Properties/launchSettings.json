@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "HackatonApi": {
+    "QRCheck.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

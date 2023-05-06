@@ -27,7 +27,12 @@ namespace Data.MongoDB.Repositories
            return await Collection.Find(filterExpression).FirstOrDefaultAsync();
         }
 
-        public async Task InsertOneAsync(TDocument document)
+        public async Task<IEnumerable<TDocument>> FindAsync(Expression<Func<TDocument, bool>> filterExpression)
+        {
+            return await ((await Collection.FindAsync(filterExpression)).ToListAsync());
+        }
+
+        public async Task<ObjectId> InsertOneAsync(TDocument document)
         {
             document.CreatedAt = DateTime.UtcNow;
             document.LastModifiedAt = DateTime.UtcNow;
@@ -44,6 +49,8 @@ namespace Data.MongoDB.Repositories
                     BypassDocumentValidation = false
                 }
             );
+
+            return document.Id;
         }
 
         public async Task ReplaceOneAsync(TDocument document)

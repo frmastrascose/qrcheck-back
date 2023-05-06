@@ -13,4 +13,11 @@ public class HealthController : ControllerBase
     {
         return Ok("Healthy");
     }
+
+    [AllowAnonymous]
+    [HttpPost()]
+    public OkObjectResult Create()
+    {
+        return Ok("Healthy");
+    }
 }
