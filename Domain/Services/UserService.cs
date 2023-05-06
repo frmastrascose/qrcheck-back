@@ -44,5 +44,10 @@ namespace Domain.Services
 
             return response;
         }
+
+        public void Update(UserRequestModel userRequestModel)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -2,6 +2,7 @@
 using Domain.Models.Test;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace Hackaton.Api.Controllers;
 
 [ApiController]
@@ -27,6 +28,18 @@ public class UserController : Controller
     public async Task<IActionResult> Create(UserRequestModel userRequestModel)
     {
         var result = await _userService.Create(userRequestModel);
+        return Ok(result);
+    }
+
+    public IUserService Get_userService()
+    {
+        return _userService;
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Update(UserRequestModel userRequestModel)
+    {
+        var result = await _userService.Update(userRequestModel, _userService.Get_userRepository());
         return Ok(result);
     }
 }
