@@ -1,4 +1,5 @@
 ﻿using Domain.Contracts.Services;
+using Domain.Models;
 using Domain.Models.Test;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,6 +28,6 @@ public class UserController : Controller
     public async Task<IActionResult> Create(UserRequestModel userRequestModel)
     {
         var result = await _userService.Create(userRequestModel);
-        return Ok(result);
+        return Ok(new BaseResponse(result));
     }
 }

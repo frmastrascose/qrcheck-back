@@ -1,8 +1,11 @@
+using Domain.Validators;
+using FluentValidation.AspNetCore;
 using Hackaton.Api.Configurations;
 using Hackaton.Api.Filters;
 using Hackaton.Api.IoC;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
+using QRCheck.Api.Configurations;
 using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,7 +21,7 @@ builder.Services.AddControllers(config =>
 builder.Services.AddControllers(c =>
 {
     c.Filters.Add(typeof(GlobalExceptionFilter));
-});
+}).AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<SmsRequestModelValidator>());
 
 builder.Services.AddControllersWithViews();
 
@@ -40,7 +43,7 @@ builder.Services.AddVersionedApiExplorer(options =>
     options.SubstituteApiVersionInUrl = true;
 });
 
-
+builder.Services.ConfigureResultErros();
 var app = builder.Build();
 var basePath = Environment.GetEnvironmentVariable("Base_Path") ?? "";
 app.UseSwagger(c =>
