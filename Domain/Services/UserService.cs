@@ -9,14 +9,14 @@ namespace Domain.Services
 {
     public class UserService : IUserService
     {
-        private readonly IRepository<UserEntity> _userRepository;
+        private readonly IRepository<TravelerEntity> _userRepository;
 
-        public UserService( IRepository<UserEntity> testRepository)
+        public UserService( IRepository<TravelerEntity> testRepository)
         {
             _userRepository = testRepository;
         }
 
-        public async Task<IEnumerable<UserEntity>> GetAll()
+        public async Task<IEnumerable<TravelerEntity>> GetAll()
         {
             return await _userRepository.FindAsync(x => x.IsActive);
         }
@@ -24,7 +24,7 @@ namespace Domain.Services
         public async Task<UserResponseModel> Create(UserRequestModel userRequestModel)
         {
 
-            var userEntity = new UserEntity
+            var userEntity = new TravelerEntity
             {
                 Name = userRequestModel.Name,
                 Email = userRequestModel.Email,

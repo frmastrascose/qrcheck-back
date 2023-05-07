@@ -25,7 +25,7 @@ namespace Domain.Entities.Mongo
 
         [BsonElement("CancelData")]
         public string CancelData { get; set; }
-
+        
         [BsonElement("isActive")]
         public bool IsActive { get; set; }
     }

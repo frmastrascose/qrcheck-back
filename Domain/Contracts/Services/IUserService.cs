@@ -8,7 +8,7 @@ namespace Domain.Contracts.Services
     {
         Task<UserResponseModel> Create(UserRequestModel userRequestModel);
         
-        Task<IEnumerable<UserEntity>> GetAll();
+        Task<IEnumerable<TravelerEntity>> GetAll();
 
         public void Update(UserRequestModel userRequestModel);
 
