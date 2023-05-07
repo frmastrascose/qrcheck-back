@@ -4,9 +4,9 @@ using System.Collections;
 
 namespace Domain.Contracts.Services
 {
-    public interface IUserService
+    public interface ITravelerService
     {
-        Task<UserResponseModel> Create(UserRequestModel userRequestModel);
+        Task<TravelerResponseModel> Create(TravelerRequestModel userRequestModel);
         
         Task<IEnumerable<UserEntity>> GetAll();
     }

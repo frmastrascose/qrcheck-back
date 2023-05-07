@@ -1,6 +1,6 @@
 ﻿namespace Domain.Models.Test;
 
-public class UserRequestModel
+public class TravelerRequestModel
 {
     public string Name { get; set; }
 
