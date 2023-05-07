@@ -35,5 +35,23 @@ namespace Domain.Entities.Mongo
         [BsonElement("Pronoun")]
         public bool Pronoun { get; set; }
 
+        [BsonElement("HotelName")]
+        public string HotelName { get; set; }
+
+        [BsonElement("CheckIn")]
+        public string CheckIn { get; set; }
+
+        [BsonElement("CheckOut")]
+        public string CheckOut { get; set; }
+
+        [BsonElement("ReservID")]
+        public string ReservID { get; set; }
+
+        [BsonElement("RoomType")]
+        public string RoomType { get; set; }
+
+        [BsonElement("CancelData")]
+        public string CancelData { get; set; }
+
     }
 }

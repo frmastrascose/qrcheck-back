@@ -13,5 +13,17 @@ public class TravelerRequestModel
     public string CPF { get; set; }
 
     public string Telephone { get; set; }
+
+    public string HotelName { get; set; }
+
+    public string CheckIn { get; set; }
+  
+    public string CheckOut { get; set; }
+    
+    public string ReservID { get; set; }
+   
+    public string RoomType { get; set; }
+  
+    public string CancelData { get; set; }
 }
 
