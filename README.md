@@ -1,7 +1,7 @@
-# qrcheck-front
+# qrcheck-back
 Back do Projeto no Hackaton Copastur
 
-Este projeto foi desenvolvido em React e é um checkpoint para tornar a experiência do usuário mais humanizada e ágil no processo de checkin de hotel.
+Este projeto foi desenvolvido em .Net Core, e é um checkpoint para tornar a experiência do usuário mais humanizada e ágil no processo de checkin de hotel.
 
 O objetivo deste projeto é criar uma aplicação que consuma uma API que busca as informações do serviço do CheckinPoint onde o usuário preenhe um formulário personalizando sua experiência e recebendo um QrCode para agilizar seu acesso ao apartamento.
 
