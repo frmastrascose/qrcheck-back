@@ -30,10 +30,34 @@ namespace Domain.Entities.Mongo
         public bool Confirmation { get; set; }
 
         [BsonElement("FoodRestriction")]
-        public bool FoodRestriction { get; set; }
+        public string FoodRestriction { get; set; }
+
+        [BsonElement("SocialName")]
+        public string SocialName { get; set; }
 
         [BsonElement("Pronoun")]
-        public bool Pronoun { get; set; }
+        public string Pronoun { get; set; }
+
+        [BsonElement("HotelName")]
+        public string HotelName { get; set; }
+
+        [BsonElement("CheckIn")]
+        public string CheckIn { get; set; }
+
+        [BsonElement("CheckOut")]
+        public string CheckOut { get; set; }
+
+        [BsonElement("ReservationId")]
+        public string ReservationId { get; set; }
+
+        [BsonElement("RoomType")]
+        public string RoomType { get; set; }
+
+        [BsonElement("RoomNumber")]
+        public string RoomNumber { get; set; }
+
+        [BsonElement("CancelData")]
+        public string CancelData { get; set; }
 
     }
 }

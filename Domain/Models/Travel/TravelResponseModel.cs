@@ -1,6 +1,4 @@
-﻿using MongoDB.Bson;
-
-namespace Domain.Models.Test;
+﻿namespace Domain.Models.Travel;
 
 public class TravelResponseModel
 {

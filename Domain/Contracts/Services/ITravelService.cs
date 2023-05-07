@@ -1,6 +1,5 @@
 ﻿using Domain.Entities.Mongo;
-using Domain.Models.Test;
-using System.Collections;
+using Domain.Models.Travel;
 
 namespace Domain.Contracts.Services
 {

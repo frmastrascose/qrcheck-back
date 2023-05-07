@@ -1,6 +1,6 @@
 ﻿using MongoDB.Bson;
 
-namespace Domain.Models.Test;
+namespace Domain.Models.Traveler;
 
 public class TravelerResponseModel
 {

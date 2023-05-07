@@ -1,16 +1,17 @@
 ﻿using Domain.Entities.Mongo;
-using Domain.Models.Test;
-using System.Collections;
+using Domain.Models.Traveler;
 
 namespace Domain.Contracts.Services
 {
     public interface ITravelerService
     {
-        Task<TravelerResponseModel> Create(TravelerRequestModel userRequestModel);
+        Task<TravelerResponseModel> Create(TravelerRequestModel travelRequestModel);
         
         Task<IEnumerable<TravelerEntity>> GetAll();
 
-        public void Update(UserRequestModel userRequestModel);
+        Task<TravelerEntity> GetById(string id);
+
+        Task Update(TravelerEntity travelerEntity, bool sendConfirmation);
 
     }
 }

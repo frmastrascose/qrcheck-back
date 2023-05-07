@@ -1,9 +1,8 @@
 ﻿using Domain.Contracts;
 using Domain.Contracts.Services;
 using Domain.Entities.Mongo;
-using Domain.Models.Test;
+using Domain.Models.Travel;
 using Microsoft.Extensions.Configuration;
-using System.Numerics;
 
 namespace Domain.Services
 {
