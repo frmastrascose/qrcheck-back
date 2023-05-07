@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.MongoDB", "Data.MongoD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QRCheck.Api", "QRCheck.Api\QRCheck.Api.csproj", "{F4A4DE5E-59AF-4BF8-A100-33AED776026B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "External.Services", "External.Services\External.Services.csproj", "{8867B5E8-F7A8-475A-8F78-E753ED57252F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F4A4DE5E-59AF-4BF8-A100-33AED776026B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4A4DE5E-59AF-4BF8-A100-33AED776026B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4A4DE5E-59AF-4BF8-A100-33AED776026B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8867B5E8-F7A8-475A-8F78-E753ED57252F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8867B5E8-F7A8-475A-8F78-E753ED57252F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8867B5E8-F7A8-475A-8F78-E753ED57252F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8867B5E8-F7A8-475A-8F78-E753ED57252F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

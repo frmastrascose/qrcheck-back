@@ -11,12 +11,9 @@ namespace Domain.Services
     {
         private readonly IRepository<UserEntity> _userRepository;
 
-        private readonly IConfiguration _configuration;
-
-        public UserService( IRepository<UserEntity> testRepository, IConfiguration cofiguration)
+        public UserService( IRepository<UserEntity> testRepository)
         {
             _userRepository = testRepository;
-            _configuration = cofiguration;
         }
 
         public async Task<IEnumerable<UserEntity>> GetAll()

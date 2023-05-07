@@ -11,6 +11,7 @@
     <PublishReadyToRun>true</PublishReadyToRun>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
@@ -19,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Data.MongoDB\Data.MongoDB.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\External.Services\External.Services.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="rds-combined-ca-bundle.pem">
