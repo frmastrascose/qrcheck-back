@@ -6,7 +6,7 @@ namespace Domain.Contracts.Services
 {
     public interface ITravelService
     {
-        Task<TravelRequestModel> Create(TravelRequestModel travelRequestModel);
+        Task<TravelResponseModel> Create(TravelRequestModel travelRequestModel);
 
         Task<IEnumerable<TravelEntity>> GetTravel();
     }

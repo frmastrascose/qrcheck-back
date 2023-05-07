@@ -37,10 +37,5 @@ public class UserController : Controller
         return _userService;
     }
 
-    [HttpPost]
-    public async Task<IActionResult> Update(UserRequestModel userRequestModel)
-    {
-        var result = await _userService.Update(userRequestModel, _userService.Get_userRepository());
-        return Ok(result);
-    }
+   
 }

@@ -20,7 +20,7 @@ namespace Domain.Services
 
         }
        
-        public async Task<TravelRequestModel> Create(TravelRequestModel travelRequestModel)
+        public async Task<TravelResponseModel> Create(TravelRequestModel travelRequestModel)
         {
             var travelEntity = new TravelEntity
             {
