@@ -1,19 +1,20 @@
-﻿using Domain.Contracts;
+﻿using AutoMapper;
+using Domain.Contracts;
 using Domain.Contracts.Services;
 using Domain.Entities.Mongo;
 using Domain.Models.Test;
-using Microsoft.Extensions.Configuration;
-using System.Numerics;
 
 namespace Domain.Services
 {
     public class UserService : IUserService
     {
         private readonly IRepository<UserEntity> _userRepository;
+        private readonly IMapper _mapper;
 
-        public UserService( IRepository<UserEntity> testRepository)
+        public UserService(IRepository<UserEntity> testRepository, IMapper mapper)
         {
             _userRepository = testRepository;
+            _mapper = mapper;
         }
 
         public async Task<IEnumerable<UserEntity>> GetAll()
@@ -24,14 +25,8 @@ namespace Domain.Services
         public async Task<UserResponseModel> Create(UserRequestModel userRequestModel)
         {
 
-            var userEntity = new UserEntity
-            {
-                Name = userRequestModel.Name,
-                Email = userRequestModel.Email,
-                Login = userRequestModel.Login,
-                Password = userRequestModel.Password,
-                IsActive = true
-        };
+            var userEntity = _mapper.Map<UserEntity>(userRequestModel);
+            userEntity.IsActive = true;
 
             var createdId = await _userRepository.InsertOneAsync(userEntity);
             var response = new UserResponseModel
@@ -40,11 +35,6 @@ namespace Domain.Services
             };
 
             return response;
-        }
-
-        public void Update(UserRequestModel userRequestModel)
-        {
-            throw new NotImplementedException();
         }
     }
 }
