@@ -8,7 +8,7 @@ public class Profiles : Profile
 {
     public Profiles()
     {
-        CreateMap<UserRequestModel, UserEntity>()
+        CreateMap<TravelerRequestModel, UserEntity>()
             .ReverseMap();
     }
 }

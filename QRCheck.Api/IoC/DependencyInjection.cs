@@ -19,7 +19,7 @@ namespace Hackaton.Api.IoC
             //Services
             services.AddScoped<ISmsService, SmsService>();
             services.AddScoped<ISmsExternalService, SmsExternalService>();
-            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ITravelerService, TravelerService>();
             services.AddScoped<IWhatsappService, WhatsappService>();
             services.AddScoped<IWhatsappExternalService, WhatsappExternalService>();
             return services;
