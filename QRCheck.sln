@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.MongoDB", "Data.MongoD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QRCheck.Api", "QRCheck.Api\QRCheck.Api.csproj", "{F4A4DE5E-59AF-4BF8-A100-33AED776026B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "External.Services", "External.Services\External.Services.csproj", "{8867B5E8-F7A8-475A-8F78-E753ED57252F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "External.Services", "External.Services\External.Services.csproj", "{8867B5E8-F7A8-475A-8F78-E753ED57252F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

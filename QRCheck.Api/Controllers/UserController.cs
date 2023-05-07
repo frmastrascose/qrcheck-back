@@ -3,6 +3,7 @@ using Domain.Models;
 using Domain.Models.Test;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace Hackaton.Api.Controllers;
 
 [ApiController]
@@ -30,4 +31,11 @@ public class UserController : Controller
         var result = await _userService.Create(userRequestModel);
         return Ok(new BaseResponse(result));
     }
+
+    public IUserService Get_userService()
+    {
+        return _userService;
+    }
+
+   
 }

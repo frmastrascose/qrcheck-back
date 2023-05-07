@@ -2,7 +2,7 @@
 
 namespace Domain.Models.Test;
 
-public class UserResponseModel
+public class TravelResponseModel
 {
     public string Id { get; set; }
 }

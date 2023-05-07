@@ -20,6 +20,12 @@ namespace Domain.Entities.Mongo
         [BsonElement("password")]
         public string Password { get; set; }
 
+        [BsonElement("CPF")]
+        public string CPF { get; set; }
+        
+        [BsonElement("Telephone")]
+        public string Telephone { get; set; }
+
         [BsonElement("isActive")]
         public bool IsActive { get; set; }
     }

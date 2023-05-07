@@ -7,7 +7,10 @@ namespace Domain.Contracts.Services
     public interface IUserService
     {
         Task<UserResponseModel> Create(UserRequestModel userRequestModel);
-        Task<IEnumerable<UserEntity>> GetAll();
         
+        Task<IEnumerable<UserEntity>> GetAll();
+
+        public void Update(UserRequestModel userRequestModel);
+
     }
 }

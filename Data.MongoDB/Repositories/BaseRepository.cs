@@ -53,6 +53,7 @@ namespace Data.MongoDB.Repositories
             return document.Id;
         }
 
+
         public async Task ReplaceOneAsync(TDocument document)
         {
             var filter = Builders<TDocument>.Filter.Eq(doc => doc.Id, document.Id);
