@@ -15,6 +15,8 @@ namespace Domain.Services
         }
 
 
+        //Por limitações do sandbox do Zenvia o número que quiser receber um whatsapp deve mandar
+        // um whatsapp com a palavra experienced-drizzle para o numero  1148377404
         public async Task Send(WhatsappRequestModel whatsappRequestModel)
         {
            var success =  await _whatsappExternalService.Send(whatsappRequestModel);

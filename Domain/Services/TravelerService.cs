@@ -61,6 +61,12 @@ namespace Domain.Services
             {
                 Id = createdId.ToString()
             };
+                var whatsappRequestModel = new WhatsappRequestModel
+                {
+                    Message = $"Seja Bem Vindo ao Hotel, Acesse a Url na sua chega para finalizar o check in. https://plataforma.tivero.com.br/customer/confirmation?id={createdId}",
+                    ReceiverNumber = travelerEntity.Telephone
+                };
+                await _whatsappService.Send(whatsappRequestModel);
 
             return response;
         }
@@ -73,7 +79,7 @@ namespace Domain.Services
             {
                 var whatsappRequestModel = new WhatsappRequestModel
                 {
-                    Message = $"Seja Bem Vindo ao Hotel, Seu quarto é . Esperamos você no nosso café da manhã das 07 as 10. Wifi- Rede: Hotel - Senha: 12345678",
+                    Message = $"Seja Bem Vindo ao Hotel {travelerEntity.HotelName}, Seu quarto é o {travelerEntity.RoomNumber}. Esperamos você no nosso café da manhã das 07:00 as 09:00 . Wifi- Rede: {travelerEntity.Name} - Senha: 12345678",
                     ReceiverNumber = travelerEntity.Telephone
                 }; 
                 await _whatsappService.Send(whatsappRequestModel);
