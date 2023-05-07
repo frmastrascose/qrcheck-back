@@ -1,3 +1,4 @@
+using Domain.AutoMapper;
 using Domain.Validators;
 using FluentValidation.AspNetCore;
 using Hackaton.Api.Configurations;
@@ -27,6 +28,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerConfiguration();
+builder.Services.AddAutoMapperSetup();
 
 builder.Services.AddIoC(Configuration);
 builder.Services.AddDataProtection();

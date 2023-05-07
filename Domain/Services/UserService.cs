@@ -1,9 +1,8 @@
-﻿using Domain.Contracts;
+﻿using AutoMapper;
+using Domain.Contracts;
 using Domain.Contracts.Services;
 using Domain.Entities.Mongo;
 using Domain.Models.Test;
-using Microsoft.Extensions.Configuration;
-using System.Numerics;
 
 namespace Domain.Services
 {
@@ -14,6 +13,7 @@ namespace Domain.Services
         public UserService( IRepository<TravelerEntity> testRepository)
         {
             _userRepository = testRepository;
+            _mapper = mapper;
         }
 
         public async Task<IEnumerable<TravelerEntity>> GetAll()
@@ -40,11 +40,6 @@ namespace Domain.Services
             };
 
             return response;
-        }
-
-        public void Update(UserRequestModel userRequestModel)
-        {
-            throw new NotImplementedException();
         }
     }
 }
